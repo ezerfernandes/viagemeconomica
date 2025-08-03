@@ -21,7 +21,7 @@ This document outlines the actionable tasks for building the platform, based on 
 
 ### 1.2. Database and Data Models
 
-- `[ ]` Set up PostgreSQL and integrate it with FastAPI using SQLAlchemy.
+- `[ ]` Set up PostgreSQL and integrate it with FastAPI.
 - `[ ]` Set up Alembic for database migrations.
 - `[ ]` Create initial migration for the `users` table (`id`, `email`, `password_hash`, `name`, `data`).
 - `[ ]` Create initial migration for the `user_preferences` table (`user_id`, `data`).
@@ -105,10 +105,3 @@ This document outlines the actionable tasks for building the platform, based on 
 - `[ ]` Build the UI for the "Mystery Trip" generator tool.
 - `[ ]` Build the booking and payment flow for Mystery Trips.
 - `[ ]` Build the UI for the community forums (viewing posts, replying, creating posts).
-
-**Task Status Legend:**
-
-- `[ ]` - To Do
-- `[P]` - Partially Implemented
-- `[I]` - Implemented
-- `[X]` - Unit Tests Implemented
