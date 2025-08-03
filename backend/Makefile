@@ -1,6 +1,5 @@
 dev:
-	fastapi dev src/main.py
+	python -m app
 
 test:
 	pytest -sv tests
-

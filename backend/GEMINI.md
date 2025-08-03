@@ -22,3 +22,10 @@ The server will be built using the **FastAPI** web framework.
   - `app.data`: Generic layer that works as a mapping between models and the DB tables.
   - `app.routers`: contains the endpoints for each subject.
 - `database/schema.sql`: It contains the DB schema with SQL commands for creating the DB in Postgres.
+
+## Tools
+
+In addition to shell commands, those tools can be used for interacting with the server:
+
+- `make dev`: Used to run the API
+- `make test`: Used to run the unit tests.
