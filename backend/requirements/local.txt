@@ -1,0 +1,13 @@
+#ruff
+ruff==0.12.7
+
+#pytest-asyncio
+iniconfig==2.1.0
+packaging==25.0
+pluggy==1.6.0
+pytest==8.4.1
+pytest-asyncio==1.1.0
+
+#pytest-cov
+coverage==7.10.1
+pytest-cov==6.2.1
