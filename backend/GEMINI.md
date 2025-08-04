@@ -14,6 +14,19 @@ The server will be built using the **FastAPI** web framework.
 - After a task is implemented, add a letter in the check: I - Implemented; P - Partially Implemented; X - Unit tests implemented.
   - Example: "[ ] Do something." After it's implemented, "[I] Do something". After Unit tests, "[X] Do something".
 
+## Tools
+
+In addition to shell commands, you can use the make commands available in the `Makefile`:
+
+- `make format`: Format code automatically
+- `make check`: Check code style and quality
+- `make format_check`: Check if code formatting is correct without changing files
+- `make lint`: Run linting
+- `make dev`: Run the development server
+- `make test`: Run all tests
+- `make docker`: Build and run the docker container locally
+- `make help`: Show available targets
+
 ## Code
 
 - `app`: It's the module with the code:
@@ -23,9 +36,40 @@ The server will be built using the **FastAPI** web framework.
   - `app.routers`: contains the endpoints for each subject.
 - `database/schema.sql`: It contains the DB schema with SQL commands for creating the DB in Postgres.
 
-## Tools
+### Models
 
-In addition to shell commands, those tools can be used for interacting with the server:
+Here an example of how a model must be implemented in the `app/models/examples.py` file:
 
-- `make dev`: Used to run the API
-- `make test`: Used to run the unit tests.
+```python
+"""Example models."""
+
+from pydantic import BaseModel, Field
+import uuid_utils as uuid
+
+from app.utils.slugs import slugify
+
+
+class ExampleCreate(BaseModel):
+    """Example create model."""
+
+    name: str = Field(..., description="The example field.")
+
+
+class Example(ExampleCreate):
+    """Example model."""
+
+    id: str = Field(..., description="The ID of the example.")
+    slug: str | None = Field(..., description="The slug of the example.")
+
+    @classmethod
+    def new(
+        cls,
+        name: str,
+    ) -> "Example":
+        """Create a new deal."""
+        return cls(
+            id=str(uuid.uuid7()),
+            slug=slugify(name),
+            name=name,
+        )
+```
