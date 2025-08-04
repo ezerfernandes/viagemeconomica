@@ -42,3 +42,13 @@ websockets==15.0.1
 #environs
 environs==14.3.0
 marshmallow==4.0.0
+
+#psycopg[binary]
+psycopg==3.2.9
+psycopg-binary==3.2.9
+
+#uuid-utils
+uuid-utils==0.11.0
+
+#unidecode
+unidecode==1.4.0

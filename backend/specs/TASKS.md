@@ -14,7 +14,7 @@ This document outlines the actionable tasks for building the platform, based on 
 ### 1.1. Project Setup & DevOps
 
 - `[ ]` Initialize FastAPI project with a clean directory structure.
-- `[ ]` Create `Dockerfile` for the backend application.
+- `[I]` Create `Dockerfile` for the backend application.
 - `[ ]` Create `docker-compose.yml` for a local development environment (FastAPI, PostgreSQL).
 - `[ ]` Set up GitHub Actions for automated testing (CI).
 - `[ ]` Configure dependency management (e.g., `poetry` or `pip-tools`).
@@ -23,10 +23,10 @@ This document outlines the actionable tasks for building the platform, based on 
 
 - `[ ]` Set up PostgreSQL and integrate it with FastAPI.
 - `[ ]` Set up Alembic for database migrations.
-- `[ ]` Create initial migration for the `users` table (`id`, `email`, `password_hash`, `name`, `data`).
-- `[ ]` Create initial migration for the `user_preferences` table (`user_id`, `data`).
-- `[ ]` Create initial migration for the `subscriptions` table (`id`, `user_id`, `plan_type`, `status`, `stripe_subscription_id`).
-- `[ ]` Create initial migration for the `deals` table (`id`, `title`, `price`, `destination`, `deal_type`, `data`).
+- `[I]` Create initial migration for the `users` table (`id`, `email`, `password_hash`, `name`, `data`).
+- `[I]` Create initial migration for the `user_preferences` table (`user_id`, `data`).
+- `[I]` Create initial migration for the `subscriptions` table (`id`, `user_id`, `plan_type`, `status`, `stripe_subscription_id`).
+- `[I]` Create initial migration for the `deals` table (`id`, `title`, `price`, `destination`, `deal_type`, `data`).
 
 ### 1.3. User & Auth Service
 
