@@ -62,7 +62,7 @@ class Example(ExampleCreate):
     slug: str | None = Field(..., description="The slug of the example.")
 
     @classmethod
-    def new(
+    def create(
         cls,
         name: str,
     ) -> "Example":

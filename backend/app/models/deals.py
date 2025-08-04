@@ -28,7 +28,7 @@ class Deal(DealCreate):
     slug: str | None = Field(..., description="The slug of the deal.")
 
     @classmethod
-    def new(
+    def create(
         cls,
         title: str,
         price: Decimal,

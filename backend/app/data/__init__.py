@@ -5,7 +5,7 @@ from typing import TYPE_CHECKING
 
 from psycopg import sql
 
-from app.data import db
+from . import db
 
 if TYPE_CHECKING:
     from pydantic import BaseModel
